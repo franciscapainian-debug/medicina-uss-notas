@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Medicina Interactiva</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>Medicina</h1>
+            <div class="gpa-box">
+                <small>PGA:</small>
+                <span id="gpa-value">--</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <span class="info-text">Click para notas / 🔒 Requisitos</span>
+            <button onclick="resetProgress()" class="btn-reset" title="Borrar todo">↺</button>
+        </div>
+    </header>
+
+    <div class="malla-container" id="malla-container">
+        </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Título</h3>
+            <p id="modal-message"></p>
+            
+            <div id="grade-input-container" class="grade-form">
+                <label>Ingresa tu nota final:</label>
+                <input type="number" id="grade-input" step="0.1" min="1.0" max="7.0" placeholder="Ej: 6.0">
+                <button onclick="confirmGrade()" class="btn-save">Guardar Nota</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
